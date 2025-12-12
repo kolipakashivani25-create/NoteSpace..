@@ -1,0 +1,135 @@
+/* ---------- Global ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: #f7f7f7;
+  padding: 20px;
+  color: #222;
+}
+
+/* ---------- Header ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.search-area {
+  display: flex;
+  gap: 10px;
+}
+
+input, textarea, button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  border: none;
+}
+
+button.secondary {
+  background: #555;
+}
+
+/* ---------- Form ---------- */
+.form-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 6px #0002;
+}
+
+#noteForm {
+  display: grid;
+  gap: 12px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---------- Notes Grid ---------- */
+.notes-heading {
+  margin: 15px 0;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+.note-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.note-card.pinned {
+  border-color: #ffb300;
+}
+
+.note-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.note-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.note-actions button {
+  padding: 6px 10px;
+  font-size: 0.9rem;
+}
+
+.note-tags {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.tag {
+  background: #eee;
+  padding: 3px 6px;
+  border-radius: 6px;
+  margin-right: 5px;
+}
+
+.timestamp {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

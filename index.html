@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoteSpace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>NoteSpace</h1>
+
+    <div class="search-area">
+      <input type="text" id="searchInput" placeholder="Search notes...">
+      <button id="searchBtn">Search</button>
+      <button id="clearBtn">Clear</button>
+    </div>
+  </header>
+
+  <section class="form-section">
+    <h2 id="formTitle">Create Note</h2>
+
+    <form id="noteForm">
+      <input type="text" id="title" placeholder="Title" required>
+      <textarea id="content" rows="5" placeholder="Content..."></textarea>
+      <input type="text" id="tags" placeholder="Tags (comma separated)">
+      
+      <label class="check">
+        <input type="checkbox" id="pinned"> Pin Note
+      </label>
+
+      <button type="submit" id="submitBtn">Create</button>
+      <button type="button" id="resetBtn" class="secondary">Reset</button>
+
+      <input type="hidden" id="editingId">
+    </form>
+  </section>
+
+  <h2 class="notes-heading">Your Notes</h2>
+  <section id="notesContainer" class="notes-grid"></section>
+
+  <script src="app.js"></script>
+</body>
+</html>
